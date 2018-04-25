@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="css/tickets.css">
+    <link rel="stylesheet" type="text/css" href="css/masking-input.css">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Link js phải đứng trên js của bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script type="text/javascript" src="js/tickets.js"></script>
+     <script type="text/javascript">
+       new WOW().init();
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container-fluid" id="logo-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-9 col-xs-12 logo">
+                        <p><i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                    </div>
+                    <div id="signup" class="col-md-1 col-sm-2">
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                    <div id="login" class="col-md-1 col-sm-1">
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /logo-bar -->
+        <div id="wellcome">
+            <div class="container-fluid" id="menu-bar">
+                <div class="container">
+                    <div class="row">
+                        <div id="page">
+                            <div class="header">
+                                <a href="#menu1"><i id="bar" class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <nav id="menu1">
+                                <ul>
+                                    <li><a href="Home.html">Home</a></li>
+                                    <li><a href="Blog.html">Blog</a></li>
+                                    <li><a href="Gallery.html">Gallery</a></li>
+                                    <li><span>Pages</span>
+                                        <ul>
+                                            <li><a href="Home.html">Home</a></li>
+                                            <li><span>Blog</span>
+                                                <ul>
+                                                    <li><a href="#">Blog 1</a></li>
+                                                    <li><a href="#">Blog 2</a></li>
+                                                    <li><a href="#">Blog 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><span>Page</span>
+                                                <ul>
+                                                    <li><a href="#">Page 1</a></li>
+                                                    <li><a href="#">Page 2</a></li>
+                                                    <li><a href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="Tickets.html">Search Tickets</a></li>
+                                            <li><a href="#">User Setting</a></li>
+                                            <li><a href="#">ShortCodes</a></li>
+                                            <li><a href="404-page.html">404 Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="About.html">About</a></li>
+                                    <li><a href="signup.html">Sign up</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div id="menu" class="col-md-10 col-sm-10">
+                            <ul>
+                                <li><a href="Home.html">Home</a></li>
+                                <li><a href="Blog.html">Blog</a>
+                                </li>
+                                <li><a href="Gallery.html">Gallery</a></li>
+                                <li id="menu-lv1" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Home.html">Home</a></li>
+                                        <li class="dropdown"><a class="dropdown-toggle" href="#">Blog <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-blog">
+                                                <li><a href="#">Blog 1</a></li>
+                                                <li><a href="#">Blog 2</a></li>
+                                                <li><a href="#">Blog 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown "><a class="dropdown-toggle" href="#">Pages <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-page">
+                                                <li><a href="#">Page 1</a></li>
+                                                <li><a href="#">Page 2</a></li>
+                                                <li><a href="#">Page 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                        <li><a href="Tickets.html">Search Tickets</a></li>
+                                        <li><a href="#">User setting</a></li>
+                                        <li><a href="#">ShortCodes</a></li>
+                                        <li><a href="404-page.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="About.html">About</a></li>
+                            </ul>
+                        </div>
+                        <!-- /menu -->
+                        <div id="money" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">USD</option>
+                                <option value="">VNĐ</option>
+                            </select>
+                        </div>
+                        <div id="language" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">US</option>
+                                <option value="">VN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="intro" class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12" id="s-ticket" >
+                            <div class="col-md-12 col-sm-12 col-xs-12 " id="search-ticket">
+                                <form id="frm-search-tickets" action="" method="POST" class="form-inline" role="form">
+                                    <div class="form-group col-md-5 col-sm-12 col-xs-12" id="Travelling-Route">
+                                        <h5>Travelling Route</h5>
+                                        <div id="travel-reponsive">
+                                            <input id="ip-travel-reponsive-1" type="text" required="" class="form-control" id="from" placeholder="From">
+                                            <button id="btn-refesh" type="button"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                                            <input required="" type="text" class="form-control" id="to" placeholder="To">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-12 col-xs-12" id="travel-date">
+                                        <h5>Travelling Date</h5>
+                                        <div id="Travelling Date">
+                                            <div class='input-group date' id='datetimepicker1'>
+                                                <input id="ip-date" required="" type='text' class="form-control" placeholder="Date">
+                                                <span id="span-date-1" class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                            <div class='input-group date' id='datetimepicker2'>
+                                                <input required="" id="way" type='text' class="form-control" placeholder="One Way">
+                                                <span id="span-date-2" class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3 col-sm-12 col-xs-12" id="travel-per">
+                                        <h5>Travelling Persons</h5>
+                                        <div class="form-group Travelling-Persons col-xs-6">
+                                            <select class="form-control" id="sel1">
+                                                <option>1 Adult</option>
+                                                <option>2 Adult</option>
+                                                <option>3 Adult</option>
+                                                <option>4 Adult</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group Travelling-Persons col-xs-6">
+                                            <select class="form-control" id="sel2">
+                                                <option>0 Kids</option>
+                                                <option>1 Kids</option>
+                                                <option>2 Kids</option>
+                                                <option>3 Kids</option>
+                                                <option>4 Kids</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button id="btn-search-tickets" type="submit" class="btn btn-lg">Search Tickets</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /menu-bar -->
+    </div>
+    <!-- /header -->
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="breadcrumb">
+                <li id="ticket-click" class="active"><a href="javascript:void(0);">1.TICKETS</a></li>
+                <li id="pass-click" class="completed"><a href="javascript:void(0);">2.PASSENGERS</a></li>
+                <li id="payment-click" class="completed"><a href="javascript:void(0);">3.PAYMENT</a></li>
+                <li id="vali-click" class="completed2"><a href="javascript:void(0);">4.VALIDATION</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="main" class="container-fluid">
+        <div class="container">
+            <div class="row" id="step1-tickets">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div id="sidebar-filter" class="col-md-12 col-sm-12 col-xs-12">
+                        <h3>Filter by</h3>
+                        <hr>
+                        <div class="title-sidebar">
+                            <h4>Coach type</h4>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>Third class sleeping</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 col-sm-12  coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>Second class sleeping</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>First class sleeping</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>Comfortable</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>Third class reserved</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>Sedentary carriage</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 coach-type">
+                            <div class="col-md-3 col-sm-3 col-xs-4 icon-sw">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="col-md-9 col-sm-9 col-xs-8 text-coach-type">
+                                <p>All</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recent-tickets" class="col-md-12 col-sm-12 col-xs-12 sub-sidebar">
+                        <p class="title-sidebar">Recent Tickets</p>
+                        <div class="col-md-12 col-sm-12 col-xs-12 recent-tickets-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 station-recent-tickets">
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations">
+                                    <h4>New York</h4>
+                                    <p>Penn Station, NY</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations station-right">
+                                    <h4>Los Angeles</h4>
+                                    <p>Union Station, CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 price-recent">
+                                <div class="col-md-6 col-sm-6 col-xs-6 icon-recent">
+                                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 prices">
+                                    <p>From <i class="fa fa-usd" aria-hidden="true"></i><strong>48</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 recent-tickets-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 station-recent-tickets">
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations">
+                                    <h4>Paris</h4>
+                                    <p>GareSaint</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations station-right">
+                                    <h4>London</h4>
+                                    <p>Padding Ton</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 price-recent">
+                                <div class="col-md-6 col-sm-6 col-xs-6 icon-recent">
+                                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 prices">
+                                    <p>From <i class="fa fa-usd" aria-hidden="true"></i><strong>72</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 recent-tickets-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 station-recent-tickets">
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations">
+                                    <h4>New York</h4>
+                                    <p>Penn Station, NY</p>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 stations station-right">
+                                    <h4>Los Angeles</h4>
+                                    <p>Union Station, CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 price-recent">
+                                <div class="col-md-6 col-sm-6 col-xs-6 icon-recent">
+                                    <i class="fa fa-wifi" aria-hidden="true"></i>
+                                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 prices">
+                                    <p>From <i class="fa fa-usd" aria-hidden="true"></i><strong>36</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recent" class="col-md-12 col-sm-12 col-xs-12 sub-sidebar">
+                        <p>Recent Post</p>
+                        <div class="recent-content col-md-12 col-sm-12 col-xs-12" id="recent-content1">
+                            <div class="col-md-4 col-sm-4 col-xs-12 recent-img">
+                                <img src="images/home-images/SanDiego.jpg" alt="San">
+                                <div class="ground-recent-img">
+                                    <button><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-12 recent-text">
+                                <p>Lorem ipsum dolor.</p>
+                                <p><i>1 day ago</i></p>
+                            </div>
+                        </div>
+                        <div class="recent-content col-md-12 col-sm-12 col-xs-12" id="recent-content2">
+                            <div class="col-md-4 col-sm-4 col-xs-12 recent-img">
+                                <img src="images/home-images/philadelphia.jpg" alt="San">
+                                <div class="ground-recent-img">
+                                    <button><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-12 recent-text">
+                                <p>Consectetur adipisicing elit.</p>
+                                <p><i>5 month ago</i></p>
+                            </div>
+                        </div>
+                        <div class="recent-content col-md-12 col-sm-12 col-xs-12" id="recent-content3">
+                            <div class="col-md-4 col-sm-4 col-xs-12 recent-img">
+                                <img src="images/home-images/Losangles.jpg" alt="San">
+                                <div class="ground-recent-img">
+                                    <button><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-12 recent-text">
+                                <p>Lorem ipsum dolor</p>
+                                <p><i>247 years ago</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12" id="content-ticket-v1">
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="show-prameter">
+                        <div class="col-md-6 col-sm-5 col-xs-12" id="found">
+                            <p>10 of 12 found</p>
+                        </div>
+                        <div class="col-md-3 col-sm-3" id="sort-by">
+                            <select>
+                                <option value="">Sort by price</option>
+                                <option value="">High to low</option>
+                                <option value="">Low to high</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 col-sm-4" id="show">
+                            <select>
+                                <option value="">Show 5 tickets on page</option>
+                                <option value="">High to low</option>
+                                <option value="">Low to high</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div  class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon1.png" alt="">
+                            <h3>048A</h3>
+                            <p>North Express</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">8:30p</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">6:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">2:50a</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 back">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timeback">
+                                    <h3 class="time-train">10:20p</h3>
+                                    <p class="date-train">Feb 18 THU</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">9:50a</h3>
+                                    <p class="date-train">Feb 19 THU</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12  price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>38</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                            <button id="buy-now-1" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon2.png" alt="">
+                            <h3>105A</h3>
+                            <p>Silver Arrow</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content train-105A">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">12:30a</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">3:50p</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12 price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>59</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                            <button id="buy-now-2" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon3.png" alt="">
+                            <h3>036C</h3>
+                            <p>American Trains</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">22:45</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">14:34</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 back">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timeback">
+                                    <h3 class="time-train">15:20</h3>
+                                    <p class="date-train">Feb 18 THU</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">21:15</h3>
+                                    <p class="date-train">Feb 19 THU</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12 price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>22</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                            <button id="buy-now-3" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon3.png" alt="">
+                            <h3>055A</h3>
+                            <p>American Trains</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content train-055A">
+                            <div class="col-md-12 col-sm-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">22:45</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">14:34</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12 price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>78</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                            <button id="buy-now-4" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon1.png" alt="">
+                            <h3>048A</h3>
+                            <p>North Express</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">8:30p</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">2:50a</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 back">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timeback">
+                                    <h3 class="time-train">10:20p</h3>
+                                    <p class="date-train">Feb 18 THU</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">9:50a</h3>
+                                    <p class="date-train">Feb 19 THU</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12 price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>256</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                            <button id="buy-now-5" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 results">
+                        <div class="col-md-3 col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon2.png" alt="">
+                            <h3>105A</h3>
+                            <p>Silver Arrow</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content train-105A">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5 timethere">
+                                    <h3 class="time-train">12:30a</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">3:50p</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12 price-results">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>59</strong>/person</p>
+                            <i class="fa fa-wifi" aria-hidden="true"></i>
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                            <button id="buy-now-6" type="button" class="btn btn-default buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                    <nav id="page-number" aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a>
+                            </li>
+                            <li id="page-1-active" class="active"><a style="color:white;background-color: #f03c0b; border-color: #f03c0b" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                 <span aria-hidden="true">»</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row" id="step2-passengers">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div id="sidebar-summary" class="col-md-12 col-sm-12 col-xs-12 sidebar-summary-add"> 
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="panel panel-default passenger">
+                        <div class="panel-heading col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-6  title-passenger">
+                                <i data-id='1' class="fa fa-minus-circle icon-min-passenger" aria-hidden="true"></i>
+                                <p>Passenger 1</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 text-right remove">
+                                <p>Remove <i class="fa fa-times removed" aria-hidden="true"></i></p>
+                            </div>
+                        </div>
+                        <div class="panel panel-body col-md-12 col-sm-12 col-xs-12 passenger-content">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>First Name</p>
+                                <input type="text" name="fname" id="input-fname" class="form-control input-fname" value="" required="required" pattern="" title="">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Last Name</p>
+                                <input type="text" name="lname" id="input-lname" class="form-control input-lname" value="" required="required">
+                            </div>
+                            <div class="col-md-4  col-sm-12 col-xs-12">
+                                <p>Age</p>
+                                <select name="" id="input-select-age" class="form-control">
+                                    <option value="">Adult</option>
+                                    <option value="">Kids</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value=""> Recuced Mobility
+                                    </label>
+                                </div>
+                            </div>
+                            <hr width="100%">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Document Type</p>
+                                <select name="" id="input-select-dt" class="form-control">
+                                    <option value="">Passport</option>
+                                    <option value="">Card</option>
+                                    <option value="">People ID</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Document Number</p>
+                                <input type="text" name="number" id="input-document-number" class="form-control input-document-number" value="" required="required">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Citizenship</p>
+                                <select name="" id="input-select-citi" class="form-control">
+                                    <option value="">United Kingdom</option>
+                                    <option value="">Viet Nam</option>
+                                </select>
+                            </div>
+                            <hr width="100%">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Additional Baggage</p>
+                                <select name="" id="input-select-additonal" class="form-control">
+                                    <option value="">1 Excess</option>
+                                    <option value="">2 Excess</option>
+                                    <option value="">3 Excess</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Animals</p>
+                                <select name="" id="input-select-animals" class="form-control">
+                                    <option value="">0 Animals</option>
+                                    <option value="">1 Animals</option>
+                                    <option value="">2 Animals</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p>Equipment</p>
+                                <select name="" id="input-select-equipment" class="form-control">
+                                    <option value="">0 Equipment</option>
+                                    <option value="">1 Equipment</option>
+                                    <option value="">2 Equipment</option>
+                                </select>
+                            </div>
+                            <hr width="100%">
+                            <div class="col-md-12 col-sm-12 col-xs-12 err">
+                                <div class="col-md-8 col-sm-12 col-xs-12 err-info">
+                                    <i class="fa fa-times-circle-o note-err" aria-hidden="true"></i>
+                                    <p class="err-p"></p>
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 btn-new-passenger">
+                                    <button class="btn btn-next-pass">Next Passenger</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="append">
+                    </div>
+                    <div class="panel panel-heading col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-6 title-passenger">
+                            <p>New Passenger</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-right remove">
+                            <p>Add <i id="add-passenger" class="fa fa-plus" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 btn-buy-pass">
+                        <button type="button" class="btn btn-buy-ticket">BUY TICKETS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="step3-payment">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div id="sidebar-summary" class="col-md-12 col-sm-12 col-xs-12 sidebar-summary-add">
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading col-md-12 col-sm-12 col-xs-12 title-payment">
+                            <p>Your personal information</p>
+                        </div>
+                        <div class="panel panel-body col-md-12 col-sm-12 col-xs-12 payment-content">
+                            <div class="col-md-4 col-sm-12 col-xs-12 payment-name">
+                                <p class="title-ip">First Name</p>
+                                <input type="text" name="fname" id="input-fname-pm" class="form-control" value="" required="required" pattern="" title="">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12 payment-lname">
+                                <p class="title-ip">Last Name</p>
+                                <input type="text" name="lname" id="input-lname-pm" class="form-control" value="" required="required">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12 payment-birth">
+                                <p class="title-ip">Birth Date</p>
+                                <div class='input-group date' id='datetimepicker3'>
+                                    <input id="ip-date3" required="" type='text' class="form-control" placeholder="">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12 payment-email">
+                                <p class="title-ip">Email</p>
+                                <input type="email" name="lname" id="input-email-pm" class="form-control" value="" required="required">
+                            </div>
+                            <div class="col-md-8 col-sm-12 col-xs-12" id="gender">
+                                <input type="radio" name="gender" value="" checked="checked"> Male
+                                <input type="radio" name="gender" value="">Female
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p class="title-ip">Document Type</p>
+                                <select name="" id="input-dt-pm" class="form-control">
+                                    <option value="">Passport</option>
+                                    <option value="">Card</option>
+                                    <option value="">People ID</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12 payment-document">
+                                <p class="title-ip">Document Number</p>
+                                <input type="text" name="number" id="input-document-pm" class="form-control" value="" required="required">
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <p class="title-ip">Citizenship</p>
+                                <select name="" id="input-citi-pm" class="form-control">
+                                    <option value="">United Kingdom</option>
+                                    <option value="">Viet Nam</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading col-md-12 col-sm-12 col-xs-12 title-payment">
+                            <p class="title-ip">Your card information</p>
+                        </div>
+                        <div class="panel panel-body col-md-12 col-sm-12 col-xs-12 payment-content">
+                            <div class="col-md-6 col-sm-12 col-xs-12 card-number" id="card-number">
+                                <p class="title-ip">Card Number</p>
+                                 <input id="cc"  type="tel" name="ccnumber" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="\d{4} \d{4} \d{4} \d{4}" class="masked card-number" title="19-digit number">
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 card-holder">
+                                <p class="title-ip">Card Holder Name</p>
+                                <input type="text" name="lname" id="input-card-holder" class="form-control" value="" required="required">
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-6 col-xs-12" id="ex-left">
+                                    <p class="title-ip">Expiration Date</p>
+                                    <select name="" id="input-expriration-date" class="form-control">
+                                        <option value="">Month</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-xs-12" id="ex-right">
+                                    <p>&nbsp</p>
+                                    <select name="" id="input-expriration-year" class="form-control">
+                                        <option value="">Year</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-6 col-xs-12" id="cvv">
+                                    <p class="title-ip">CVV</p>
+                                    <select name="" id="input-expriration-date" class="form-control">
+                                        <option value="">000</option>
+                                        <option value="">001</option>
+                                        <option value="">002</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12 col-sm-12" id="atention">
+                        <div class="col-md-1 col-xs-2 " id="arrow-circle-right">
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-11 col-xs-10">
+                            <h4>Attention! Please read important information!</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa reiciendis cupiditate fuga quaerat, fugiat eaque repellendus quod nesciunt, amet atque placeat quam explicabo vero voluptas rerum voluptatibus iste sit quo neque unde blanditiis laboriosam. Doloremque, facilis, animi nam similique, alias, ipsa harum doloribus rem vero officiis</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 btn-payment">
+                        <div class="col-md-6 col-sm-12 col-xs-12 checkbox-agree" id="checkbox-agree">
+                            <input id="check-pm" type="checkbox" name="agree">By continuing, you agree to the <a href="#">Terms and Conditions</a>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12" id="btn-ticket-pm">
+                            <button type="button" class="btn btn-buy-ticket">BUY TICKETS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="step4-vali">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div id="sidebar-summary" class="col-md-12 col-sm-12 col-xs-12 sidebar-summary-add">
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="col-md-12 col-xs-12 results change">
+                        <div class="col-md-12 col-xs-12 title-vali title-train">
+                            <p>Train</p>
+                        </div>
+                        <div class="col-md-3  col-sm-12 col-xs-12 results-logo">
+                            <img src="images/home-images/results-icon1.png" alt="">
+                            <h3>048A</h3>
+                            <p>North Express</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 results-content">
+                            <div class="col-md-12 col-sm-12 col-xs-12 there">
+                                <div class="col-md-4 col-sm-4 col-xs-5">
+                                    <h3 class="time-train">8:30p</h3>
+                                    <p class="date-train">Feb 14 SUN</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">2:50a</h3>
+                                    <p class="date-train">Feb 15 SUN</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 back">
+                                <div class="col-md-4 col-sm-4 col-xs-5">
+                                    <h3 class="time-train">10:20p</h3>
+                                    <p class="date-train">Feb 18 THU</p>
+                                    <h4 class="location-result">New York</h4>
+                                    <p class="station-train">Penn Station,NY</p>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-2 arrow-result">
+                                    <p class="date-train">7:25</p>
+                                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-5 text-right">
+                                    <h3 class="time-train">9:50a</h3>
+                                    <p class="date-train">Feb 19 THU</p>
+                                    <h4 class="location-result">Los Angeles</h4>
+                                    <p class="station-train">Union Station,CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12  price-results price-change ">
+                            <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>38</strong>/person</p>
+                            <button id="btn-change" type="button" class="btn btn-default">Change</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading col-md-12 col-sm-12 col-xs-12 title-payment">
+                            <p>Passenger</p>
+                        </div>
+                        <div class="panel panel-body col-md-12 col-sm-12 col-xs-12 payment-content vali-content">
+                            <div class="col-md-9 vali-content-left">
+                                <div class="col-md-12 col-xs-12 vali-left">
+                                    <div class="col-md-3 col-xs-12 title-vali">
+                                        <h4>Adult 1</h4>
+                                        <p>Name</p>
+                                        <p>Date of Birth</p>
+                                        <p>Document</p>
+                                        <p>Baggage</p>
+                                    </div>
+                                    <div class="col-md-5 col-xs-12 info-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p>John Doe</p>
+                                        <p>07/17/87</p>
+                                        <p>Passport of USA MD357895</p>
+                                        <p>1 Excess</p>
+                                        <p>1 Equipment</p>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 price-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p><i class="fa fa-usd" aria-hidden="true"></i>44</p>
+                                        <p><i class="fa fa-usd" aria-hidden="true"></i>32</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12 vali-left">
+                                    <div class="col-md-3 col-xs-12 title-vali">
+                                        <h4>Adult 2</h4>
+                                        <p>Name</p>
+                                        <p>Date of Birth</p>
+                                        <p>Document</p>
+                                        <p>Baggage</p>
+                                    </div>
+                                    <div class="col-md-5 col-xs-12 info-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p>Jane Doe</p>
+                                        <p>08/28/89</p>
+                                        <p>Passport of USA MD654321</p>
+                                        <p>2 Excess</p>
+                                        <p>1 Animals/Bird</p>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 price-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p><i class="fa fa-usd" aria-hidden="true"></i>88</p>
+                                        <p><i class="fa fa-usd" aria-hidden="true"></i>62</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12 vali-left">
+                                    <div class="col-md-3 col-xs-12 title-vali">
+                                        <h4>Kid 1</h4>
+                                        <p>Name</p>
+                                        <p>Date of Birth</p>
+                                        <p>Document</p>
+                                        <p>Baggage</p>
+                                    </div>
+                                    <div class="col-md-5 col-xs-12 info-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p>Jimm Doe</p>
+                                        <p>11/26/00</p>
+                                        <p>Passport of USA CI159876</p>
+                                        <p>1 Excess</p>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 price-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p class="delete">&nbsp</p>
+                                        <p><i class="fa fa-usd" aria-hidden="true"></i>44</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-12 button-change">
+                                <div class="col-md-12 col-sm-12 col-xs-12  price-results price-change">
+                                    <p><i class="fa fa-usd dolar" aria-hidden="true"></i><strong>210</strong>/person</p>
+                                    <button id="btn-change1" type="button" class="btn btn-default">Change</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading col-md-12 col-sm-12 col-xs-12 title-payment">
+                            <p>Payment</p>
+                        </div>
+                        <div class="panel panel-body col-md-12 col-sm-12 col-xs-12 payment-content vali-content">
+                            <div class="col-md-9 vali-content-left">
+                                <div class="col-md- col-xs-12 vali-left">
+                                    <div class="col-md-12 col-xs-12">
+                                        <h4>Personal information</h4>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 title-vali">
+                                        <p>Name</p>
+                                        <p>Date of Birth</p>
+                                        <p>Email</p>
+                                        <p>Document</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 info-vali">
+                                        <p>John Doe</p>
+                                        <p>07/17/87</p>
+                                        <p>qweqwe@mail.com</p>
+                                        <p>Passport of USA MD357895</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xs-12 vali-left">
+                                    <div class="col-md-6 col-xs-12 title-vali">
+                                        <h4>Adult 2</h4>
+                                        <p>Name</p>
+                                        <p>Date of Birth</p>
+                                        <p>Document</p>
+                                        <p>Baggage</p>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 info-vali">
+                                        <h4 class="delete">&nbsp</h4>
+                                        <p>Jane Doe</p>
+                                        <p>08/28/89</p>
+                                        <p>Passport of USA MD654321</p>
+                                        <p>2 Excess</p>
+                                        <p>1 Animals/Bird</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-12 button-change">
+                                <div class="col-md-12 col-sm-12 col-xs-12  price-results price-change">
+                                    <button id="btn-change" type="button" class="btn btn-default">Change</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12 col-sm-12 total-vali">
+                        <div class="col-md-4">
+                            <h3>Total</h3>
+                            <p><i class="fa fa-usd" aria-hidden="true"></i>999</p>
+                        </div>
+                        <div class="col-md-8 btn-vali">
+                            <button id="btn-vali" type="button" class="btn btn-buy-ticket">BUY TICKETS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer">
+      <div class="container">
+            <div class="row" id="footer-row">
+                <div class="col-md-3 col-sm-6 col-xs-12" id="menu-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Menu</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-menu-footer">
+                        <ul>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Travel New</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Best Price Guarantee</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="contacts-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Contacts Us</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-contacts-footer">
+                        <ul>
+                            <li><i class="fa fa-phone-square" aria-hidden="true"></i>+444 5533 8866</li>
+                            <li><i class="fa fa-skype" aria-hidden="true"></i>book.your.train</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>mail@bookyourtrain.com</li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>5138 Little Shadow Gardens, Del Monte, Alaska, 99631-4129, US</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="blog-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Blog Posts</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="blog1">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/DC.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>1 day ago</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/Losangles.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>247 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="subcrise-foot">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Subcribe</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="subcrise-footer">
+                        <p>Be aware of news</p>
+                        <form action="" method="POST" class="form-inline" role="form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="ip-sub" required="" placeholder="Your e-mail">
+                            </div>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer" id="follow-footer">
+                        <p>Follow Us</p>
+                        <ul>
+                            <li><a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.googleplus.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin:10px 0;">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 logo" id="logo-footer">
+                    <p> <i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                </div>
+                <div class="col-md-2 col-sm-2" id="backtop">
+                    <button id="myBtn" title="Go to top"><i class="fa fa-angle-up" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-5 col-sm-5" id="copyright">
+                    <p>© 2015 BestWebSoft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/masking-input.js" data-autoinit="true"></script>
+</body>
+
+</html>

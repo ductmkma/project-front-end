@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Link js phải đứng trên js của bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+       new WOW().init();
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container-fluid" id="logo-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-9 col-xs-12 logo">
+                        <p><i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                    </div>
+                    <div id="signup" class="col-md-1 col-sm-2">
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                    <div id="login" class="col-md-1 col-sm-1">
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /logo-bar -->
+        <div id="wellcome">
+            <div class="container-fluid" id="menu-bar">
+                <div class="container">
+                    <div class="row">
+                        <div id="page">
+                            <div class="header">
+                                <a href="#menu1"><i id="bar" class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <nav id="menu1">
+                                <ul>
+                                    <li><a href="Home.html">Home</a></li>
+                                    <li><a href="Blog.html">Blog</a></li>
+                                    <li><a href="Gallery.html">Gallery</a></li>
+                                    <li><span>Pages</span>
+                                        <ul>
+                                            <li><a href="Home.html">Home</a></li>
+                                            <li><span>Blog</span>
+                                                <ul>
+                                                    <li><a href="#">Blog 1</a></li>
+                                                    <li><a href="#">Blog 2</a></li>
+                                                    <li><a href="#">Blog 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><span>Page</span>
+                                                <ul>
+                                                    <li><a href="#">Page 1</a></li>
+                                                    <li><a href="#">Page 2</a></li>
+                                                    <li><a href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="Tickets.html">Search Tickets</a></li>
+                                            <li><a href="#">User Setting</a></li>
+                                            <li><a href="#">ShortCodes</a></li>
+                                            <li><a href="404-page.html">404 Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="About.html">About</a></li>
+                                    <li><a href="signup.html">Sign up</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="menu" class="col-md-10 col-sm-10">
+                            <ul>
+                                <li><a href="Home.html">Home</a></li>
+                                <li><a href="Blog.html">Blog</a>
+                                </li>
+                                <li><a href="Gallery.html">Gallery</a></li>
+                                <li id="menu-lv1" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Home.html">Home</a></li>
+                                        <li class="dropdown"><a class="dropdown-toggle" href="#">Blog <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-blog">
+                                                <li><a href="#">Blog 1</a></li>
+                                                <li><a href="#">Blog 2</a></li>
+                                                <li><a href="#">Blog 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown "><a class="dropdown-toggle" href="#">Pages <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-page">
+                                                <li><a href="#">Page 1</a></li>
+                                                <li><a href="#">Page 2</a></li>
+                                                <li><a href="#">Page 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                        <li><a href="Tickets.html">Search Tickets</a></li>
+                                        <li><a href="#">User setting</a></li>
+                                        <li><a href="#">ShortCodes</a></li>
+                                        <li><a href="404-page.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="About.html">About</a></li>
+                            </ul>
+                        </div>
+                        <!-- /menu -->
+                        <div id="money" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">USD</option>
+                                <option value="">VNĐ</option>
+                            </select>
+                        </div>
+                        <div id="language" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">US</option>
+                                <option value="">VN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="intro" class="row">
+                        <div id="text-intro" class="col-md-6 col-sm-6 col-xs-12 wow slideInLeft">
+                            <div id="text-intro-title" class="col-md-12 col-sm-12 col-xs-12">
+                                <p  ><strong>WELCOME TO<br>BOOK</strong> YOUR <strong>TRAIN</strong></p>
+                            </div>
+                            <div id="text-intro-content" class="col-md-12 col-sm-12 col-xs-12">
+                                <p>We saves your time both while purchasing, the check-in and during the travel</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12 wow slideInRight" id="s-ticket">
+                            <div class="col-md-12 col-sm-12 col-xs-12 " id="search-ticket">
+                                <form id="frm-search-tickets" action="" method="POST" class="form-inline" role="form">
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12" id="Travelling-Route">
+                                        <h5>Travelling Route</h5>
+                                        <div id="reponsive-btn">
+                                            <input type="text" required="" class="form-control" id="from" placeholder="From">
+                                            <button id="btn-refesh" type="button"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                                            <input required="" type="text" class="form-control" id="to" placeholder="To">
+                                        </div>
+                                    </div>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12" id="travel-date">
+                                        <h5>Travelling Date</h5>
+                                        <div id="Travelling Date">
+                                            <div class='input-group date' id='datetimepicker1'>
+                                                <input id="ip-date" required="" type='text' class="form-control" placeholder="MM/DD/YY">
+                                                <span id="span-date-1" class="input-group-addon">
+                                                    <span  class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                            <div class='input-group date' id='datetimepicker2'>
+                                                <input required="" id="way" type='text' class="form-control" placeholder="One Way">
+                                                <span id="span-date-2" class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    </br>
+                                    <div class="form-group col-md-12 col-sm-12 col-xs-12" id="travel-per">
+                                        <h5>Travelling Persons</h5>
+                                        <div class="form-group Travelling-Persons col-xs-6">
+                                            <select class="form-control" id="sel1">
+                                                <option>1 Adult</option>
+                                                <option>2 Adult</option>
+                                                <option>3 Adult</option>
+                                                <option>4 Adult</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group Travelling-Persons col-xs-6">
+                                            <select class="form-control" id="sel2">
+                                                <option>0 Kids</option>
+                                                <option>1 Kids</option>
+                                                <option>2 Kids</option>
+                                                <option>3 Kids</option>
+                                                <option>4 Kids</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button id="btn-search-tickets" type="button" class="btn btn-lg">Search Tickets</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /menu-bar -->
+    </div>
+    <!-- /header -->
+    <div id="main" class="container-fluid">
+        <div class="row">
+            <div id="underline" class="col-md-12 col-sm-12 col-xs-12">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="title-content1">
+                <div id="title-dis" class="col-md-11 col-sm-10 col-xs-12">
+                    <h3 >Top Travel Destinations</h3>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-12 btn-title">
+                    <button type="button">Browse All</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="container-top-travel">
+            <div class="row col-md-12 col-sm-6 col-xs-12" id="row1">
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/Losangles.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/Wash.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">New York</p>
+                            <p class="station">Penn Station, NY</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">Los Angeles</p>
+                            <p class="station1">Union Station, CA</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Every day</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 238</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel1" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail ">
+                                    <img src="images/home-images/Wash.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12  col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/DC.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">Los Angeles</p>
+                            <p class="station">Union Station, CA</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">Washington</p>
+                            <p class="station1">Union Station, DC</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Week days</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 248</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators slide-img">
+                            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel2" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail ">
+                                    <img src="images/home-images/DC.jpg">
+                                    <div class="show-travel">
+                                       <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/Losangles.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">Washington</p>
+                            <p class="station">Union Station, DC</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">New York</p>
+                            <p class="station1">Penn Station, NY</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Week end</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 258</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12 col-sm-6 col-xs-12" id="row2">
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel3" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel3" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail ">
+                                    <img src="images/home-images/SanDiego.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/chicago.jpg">
+                                    <div class="show-travel">
+                                       <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">San Diego</p>
+                            <p class="station">Old Town, CA</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">Chicago</p>
+                            <p class="station1">Union Station, IL</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Every day</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 238</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel4" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel4" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel4" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail ">
+                                    <img src="images//home-images/chicago.jpg">
+                                    <div class="show-travel">
+                                       <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/philadelphia.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">Chicago</p>
+                            <p class="station">Union Station, IL</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">Philadelphia</p>
+                            <p class="station1">30th Street Station</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Week days</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 248</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbail col-md-4 col-sm-12 col-xs-12">
+                    <div id="myCarousel5" class="carousel slide" data-ride="carousel" class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators slide-img">
+                            <li data-target="#myCarousel5" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel5" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="item active" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail ">
+                                    <img src="images/home-images/philadelphia.jpg">
+                                    <div class="show-travel">
+                                        <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 img-thumbail">
+                                    <img src="images/home-images/SanDiego.jpg">
+                                    <div class="show-travel">
+                                       <button type="button"><a href="Tickets.html">Show Travel</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 location-station">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location">Philadelphia</p>
+                            <p class="station">30th Street Station</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p class="location1">San Diego</p>
+                            <p class="station1">Old Town, CA</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 price">
+                        <div class="col-md-6 col-sm-6 col-xs-6 where">
+                            <p>Week end</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 cost">
+                            <p><i class="fa fa-usd" aria-hidden="true"></i> 258</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="latest-post">
+        <div class="container">
+            <div class="row" id="title-content2">
+                <div id="title-dis" class="col-md-11 col-sm-10 col-xs-12">
+                    <h3>Latest posts</h3>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-12 btn-title">
+                    <button type="button">Older post</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="container-latest-post">
+            <div class="row col-md-12 col-sm-6 col-xs-12  " id="lest-row1">
+                <div class="col-md-6 col-sm-12 col-xs-12" id="newtrain">
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-img latest-post-img-row1">
+                        <img src="images/home-images/new-train.jpg" alt="">
+                        <div class="readmore">
+                            <button type="button">Read More</button>
+                        </div>
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-text">
+                        <h5>New train destination</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici ng elit, sed do eiusmod tempor incididunt ut.</p>
+                        <hr width="100%">
+                        <div class="col-md-12 col-sm-12 col-xs-12 latest-post-text-footer">
+                            <div class="col-md-6 col-sm-6 col-xs-6  author">
+                                <p>By <span>Admin</span></p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 latest-post-time">
+                                <p>1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12" id="best-travel">
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-img latest-post-img-row1">
+                        <img src="images/home-images/best-travel.jpg" alt="">
+                        <div class="readmore">
+                            <button type="button">Read More</button>
+                        </div>
+                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-text">
+                        <h5>Best travel destinations</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici ng elit, sed do eiusmod tempor incididunt ut.</p>
+                        <hr width="100%">
+                        <div class="col-md-12 col-sm-12 col-xs-12 latest-post-text-footer">
+                            <div class="col-md-6 col-sm-6 col-xs-6 author">
+                                <p>By <span>Admin</span></p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 latest-post-time">
+                                <p>1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-12 col-sm-6 col-xs-12" id="lest-row2">
+                <div class="col-md-6 col-xs-12" id="top10best">
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-text">
+                        <h5>Top10 best train stations</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici ng elit, sed do eiusmod tempor incididunt ut.</p>
+                        <hr width="100%">
+                        <div class="col-md-12 col-xs-12latest-post-text-footer">
+                            <div class="col-md-6 col-sm-6 col-xs-6 author">
+                                <p>By <span>Admin</span></p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 latest-post-time">
+                                <p>1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6  col-sm-12 col-xs-12 latest-post-img latest-post-img-row1">
+                        <img src="images/home-images/welcome.jpg" alt="">
+                        <div class="readmore">
+                            <button type="button">Read More</button>
+                        </div>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12" id="summer">
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-text">
+                        <h5>Summer Trips 2015</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici ng elit, sed do eiusmod tempor incididunt ut.</p>
+                        <hr width="100%">
+                        <div class="col-md-12 col-sm-12 col-xs-12 latest-post-text-footer">
+                            <div class="col-md-6 col-sm-6 col-xs-6 author">
+                                <p>By <span>Admin</span></p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 latest-post-time">
+                                <p>1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 latest-post-img latest-post-img-row1">
+                        <img src="images/home-images/summer-trip.jpg" alt="">
+                        <div class="readmore">
+                            <button type="button">Read More</button>
+                        </div>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="E-TICKETS">
+        <div class="container">
+            <div class="row" id="title-content2">
+                <div id="title-e-tickets" class="col-md-11 col-sm-10 col-xs-12">
+                    <h3>E-TICKETS ADVANTAGES</h3>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-12 btn-title" id="btn-learn-more">
+                    <button type="button">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" id="e-tickets-row2">
+                <div class="col-md-4 col-sm-4 col-xs-12 over-ground">
+                    <div class="over-icon col-md-12 col-sm-12 col-xs-12">
+                        <div class="over-icon-out col-md-8 col-sm-8 col-sm-offset-3 col-md-offset-4">
+                            <div class="over-icon-in">
+                                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width='100%' color='#e0dfdf'>
+                    <div class="col-md-12 col-sm-12 col-xs-12 over-icon-text">
+                        <p>It's very easy to order a train ticket online. E-ticket can not be lost or forgotten at home. </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 over-ground">
+                    <div class="over-icon col-md-12 col-sm-12 col-xs-12">
+                        <div class="over-icon-out col-md-8 col-sm-8 col-sm-offset-3 col-md-offset-4">
+                            <div class="over-icon-in">
+                                <i class="fa fa-building" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width='100%' color='#e0dfdf'>
+                    <div class="col-md-12 col-sm-12 col-xs-12 over-icon-text">
+                        <p>There's no need to go to the ticket office additionally before your trip. Save your money and nerves.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 over-ground">
+                    <div class="over-icon col-md-12 col-sm-12 col-xs-12">
+                        <div class="over-icon-out col-md-8 col-sm-8 col-sm-offset-3 col-md-offset-4">
+                            <div class="over-icon-in">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr width='100%' color='#e0dfdf'>
+                    <div class="col-md-12 col-sm-12 col-xs-12 over-icon-text">
+                        <p>It's very easy to order a train ticket online. E-ticket can not be lost or forgotten at home. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="testimon">
+        <div class="container">
+            <div class="row" id="title-content2">
+                <div id="title-test" class="col-md-11 col-sm-12 col-xs-12">
+                    <h3>Testimonials</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="myCarousel6" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" id="carousel-2">
+                    <li data-target="#myCarousel6" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel6" data-slide-to="1"></li>
+                    <li data-target="#myCarousel6" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-1.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Nguyễn Trung Thành</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-3.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Trần Minh Đức</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-1.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Nguyễn Trung Thành</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-2.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Trần Thùy Linh</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-3.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Trần Minh Đức</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 ground">
+                                <div class="img-icon-sideshow img-circle col-md-3 col-sm-3 col-xs-12">
+                                    <img class="img-circle" width="100px" height="100px" src="images/home-images/sideshow-4.jpg">
+                                </div>
+                                <div class="text-sideshow col-md-9 col-sm-9 col-xs-12">
+                                    <h4><strong>Đặng Hoài Thương</strong></h4>
+                                    <p>Tôi tự nhủ với bản thân mình rằng, cần phải sống chân thực. Bất kể người khác nhìn mình bằng con mắt nào đi chăng nữa, dù cả thế giới phủ định, tôi vẫn có bản thân tin tưởng mình.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer">
+        <div class="container">
+            <div class="row" id="footer-row">
+                <div class="col-md-3 col-sm-6 col-xs-12" id="menu-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Menu</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-menu-footer">
+                        <ul>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Travel New</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Best Price Guarantee</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="contacts-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Contacts Us</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-contacts-footer">
+                        <ul>
+                            <li><i class="fa fa-phone-square" aria-hidden="true"></i>+444 5533 8866</li>
+                            <li><i class="fa fa-skype" aria-hidden="true"></i>book.your.train</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>mail@bookyourtrain.com</li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>5138 Little Shadow Gardens, Del Monte, Alaska, 99631-4129, US</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="blog-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Blog Posts</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="blog1">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/DC.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>1 day ago</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/Losangles.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>247 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="subcrise-foot">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Subcribe</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="subcrise-footer">
+                        <p>Be aware of news</p>
+                        <form action="" method="POST" class="form-inline" role="form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="ip-sub" required="" placeholder="Your e-mail">
+                            </div>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer" id="follow-footer">
+                        <p>Follow Us</p>
+                        <ul>
+                            <li><a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.googleplus.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin:10px 0;">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 logo" id="logo-footer">
+                    <p> <i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                </div>
+                <div class="col-md-2 col-sm-2" id="backtop">
+                    <button id="myBtn" title="Go to top"><i class="fa fa-angle-up" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-5 col-sm-5" id="copyright">
+                    <p>© 2015 BestWebSoft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

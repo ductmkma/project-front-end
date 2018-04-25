@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Link js phải đứng trên js của bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container-fluid" id="logo-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-9 col-xs-12 logo">
+                        
+                        <p><i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                    </div>
+                    <div class="col-md-7">
+                    </div>
+                    <div id="signup" class="col-md-1 col-sm-2">
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                    <div id="login" class="col-md-1 col-sm-1">
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /logo-bar -->
+        <div id="wellcome">
+            <div class="container-fluid" id="menu-bar">
+                <div class="container">
+                    <div class="row">
+                       <div id="page">
+                            <div class="header">
+                                <a href="#menu1"><i id="bar" class="fa fa-bars" aria-hidden="true"></i></a>
+                            </div>
+                            <nav id="menu1">
+                                <ul>
+                                    <li><a href="Home.html">Home</a></li>
+                                    <li><a href="Blog.html">Blog</a></li>
+                                    <li><a href="Gallery.html">Gallery</a></li>
+                                    <li><span>Pages</span>
+                                        <ul>
+                                            <li><a href="Home.html">Home</a></li>
+                                            <li><span>Blog</span>
+                                                <ul>
+                                                    <li><a href="#">Blog 1</a></li>
+                                                    <li><a href="#">Blog 2</a></li>
+                                                    <li><a href="#">Blog 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><span>Page</span>
+                                                <ul>
+                                                    <li><a href="#">Page 1</a></li>
+                                                    <li><a href="#">Page 2</a></li>
+                                                    <li><a href="#">Page 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="Tickets.html">Search Tickets</a></li>
+                                            <li><a href="#">User Setting</a></li>
+                                            <li><a href="#">ShortCodes</a></li>
+                                            <li><a href="404-page.html">404 Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="About.html">About</a></li>
+                                    <li><a href="signup.html">Sign up</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="menu" class="col-md-10 col-sm-10">
+                            <ul>
+                                <li><a href="Home.html">Home</a></li>
+                                <li><a href="Blog.html">Blog</a>
+                                </li>
+                                <li><a href="Gallery.html">Gallery</a></li>
+                                <li id="menu-lv1" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Home.html">Home</a></li>
+                                        <li class="dropdown"><a class="dropdown-toggle" href="#">Blog <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-blog">
+                                                <li><a href="#">Blog 1</a></li>
+                                                <li><a href="#">Blog 2</a></li>
+                                                <li><a href="#">Blog 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown "><a class="dropdown-toggle" href="#">Pages <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu" id="sub-page">
+                                                <li><a href="#">Page 1</a></li>
+                                                <li><a href="#">Page 2</a></li>
+                                                <li><a href="#">Page 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contacts</a></li>
+                                        <li><a href="Tickets.html">Search Tickets</a></li>
+                                        <li><a href="#">User setting</a></li>
+                                        <li><a href="#">ShortCodes</a></li>
+                                        <li><a href="404-page.html">404 Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="About.html">About</a></li>
+                            </ul>
+                        </div>
+                        <!-- /menu -->
+                        <div id="money" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">USD</option>
+                                <option value="">VNĐ</option>
+                            </select>
+                        </div>
+                        <div id="language" class="col-md-1 col-sm-1">
+                            <select name="">
+                                <option value="">US</option>
+                                <option value="">VN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" id="row-login">
+                        <div class="col-md-3 col-sm-5 col-xs-12" id="frm-login">
+                            <div>
+                                <form action="" method="POST" role="form">
+                                    <legend id="login-legend">Login</legend>
+                                    <div class="form-group col-md-12 col-xs-12" id="ip-frm-login" style="padding: 0;">
+                                        <label for="">Enter your E-mail *</label>
+                                         <i id="icon-email" class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                        <p id="in-err-email"></p>
+                                        <input type="email" class="form-control" id="ip-email" placeholder="example@mail.com">
+                                        <label for="">Enter your password * </label>
+                                        <p id="in-err-pass"></p>
+                                        <input type="password" class="form-control" id="ip-pass" placeholder="********"><i id="icon-pass" class="fa fa-check-circle-o" aria-hidden="true"></i>
+                                        <div class="col-md-12 col-sm-12 col-xs-12  checkbox">
+                                            <div class="col-md-6 col-sm-6 col-xs-6" id="ip-checkbox">
+                                                <input type="checkbox" name="" value="">Remember
+                                            </div>
+                                            <p class="col-md-6 col-sm-6 col-xs-6"><a href="">Forgot password ?</a></p>
+                                        </div>
+                                        <button id="btn-login" type="button" class="btn col-md-12 col-sm-12 col-xs-12">Login</button>
+                                    </div>
+                                    <hr width='100%'>
+                                </form>
+                                <div class="col-md-12 col-sm-12 col-xs-12" id="btn-login-with">
+                                    <a id="btn-login-fb" href="https:\\facebook.com" class="btn btn-info col-md-12 col0-sm-12 col-xs-12" role="button"><i class="fa fa-facebook-square" aria-hidden="true"></i>Login with Facebook</a>
+                                    <a id="btn-login-gg" href="https:\\googleplus.com" class="btn btn-info col-md-12 col-sm-12 col-xs-12" role="button"><i class="fa fa-google-plus-square" aria-hidden="true"></i>Login with Google+</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-6" id="login-note">
+                            <div class="row" id="title-login">
+                                <p>login note</p>
+                            </div>
+                            <div class="row" id="content-login">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    <br>
+                                    <br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /menu-bar -->
+    </div>
+    <!-- /header -->
+    <div class="container-fluid" id="footer">
+        <div class="container">
+             <div class="row" id="footer-row">
+                <div class="col-md-3 col-sm-6 col-xs-12" id="menu-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Menu</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-menu-footer">
+                        <ul>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Travel New</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Best Price Guarantee</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="contacts-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Contacts Us</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="content-contacts-footer">
+                        <ul>
+                            <li><i class="fa fa-phone-square" aria-hidden="true"></i>+444 5533 8866</li>
+                            <li><i class="fa fa-skype" aria-hidden="true"></i>book.your.train</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>mail@bookyourtrain.com</li>
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i>5138 Little Shadow Gardens, Del Monte, Alaska, 99631-4129, US</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="blog-footer">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Blog Posts</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="blog1">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/DC.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>1 day ago</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-4 col-sm-4 col-xs-6 blog-img">
+                            <img width='80px' height="80px" src="images/home-images/Losangles.jpg">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-6 blog-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <p>247 years ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12" id="subcrise-foot">
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer">
+                        <p>Subcribe</p>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12" id="subcrise-footer">
+                        <p>Be aware of news</p>
+                        <form action="" method="POST" class="form-inline" role="form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="ip-sub" required="" placeholder="Your e-mail">
+                            </div>
+                            <button type="submit" class="btn">Send</button>
+                        </form>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 title-footer" id="follow-footer">
+                        <p>Follow Us</p>
+                        <ul>
+                            <li><a target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.googleplus.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin:10px 0;">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-xs-12 logo" id="logo-footer">
+                   
+                    <p> <i class="fa fa-train" aria-hidden="true"></i><strong>book</strong>your<strong>train</strong></p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12" id="backtop">
+                    <button id="myBtn" title="Go to top"><i class="fa fa-angle-up" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12" id="copyright">
+                    <p>© 2015 BestWebSoft</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
